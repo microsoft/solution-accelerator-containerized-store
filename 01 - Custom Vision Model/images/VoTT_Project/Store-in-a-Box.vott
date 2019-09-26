@@ -1,0 +1,549 @@
+{
+    "name": "Store-in-a-Box",
+    "securityToken": "Store-in-a-Box Token",
+    "sourceConnection": {
+        "name": "SIAB Images",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZmM3NjFmYTg3OWI3NDBhZjlhMWRiYmFlZTEyOTA0ODhhMTI0N2I4YjNhY2M5MmNlZjdkYTNhYjVjODIwZmY2NjIxZDYzODM2MjBkZjJmOTM5NWQ3OWYyOWI1M2Y4M2M4ZDNjYWM3ZWYwMGQ1MWZkZGM0ZWU1YjJkNWQwMWEzMmQ4NzQ0OWQyNjhjOTEyMmExNmVjODZkOTBkNzFmYzhmODFlZjllZDk1YzhkMmM4NDQ0MGYyNTBmYzlkOWU5OGZiNTNmODExYjgwOTc3NDljNmU1OWNjOTdmOGNhNThmMjAwYmQ4YzExMjQwYWE0ZjljOTFlNDBiMThjMTFkYjE5OSIsIml2IjoiYWJlMzMwZjFiODk4MmQyMDQzMTkxN2Y1YzRmZWVmNzc2NjUxYThmMzUzYzRlNTU0In0="
+        },
+        "id": "EaY5_SN69"
+    },
+    "targetConnection": {
+        "name": "SIAB VoTT Project",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMGI2ZGVhMTU4NzdhOGE1OTE1ZmQxYzNlMDI3MWY5NTAyYWVmNDQ3MzE5YmI4YTc0NzhhNWJkNmEzNjc5OTdhNjE4ZWJmZjI3NzA5ODlkN2Q0OWRmZDJkMzAyMWM2ZWRhMTc2YzVjZGQ2NjkxMjkxMWUxNTZlMjdiZDliMjMxZWM1ZDBiM2QxNGVmMzk4ODU5Y2U1ZGY4ZTJmNDg0NTRkNTE3NjRkOGM5NDQ1NzY4YzRiYmM1NzBhMjQ5N2JiYWZlNDEwZTdlODRlNmJmN2RmNzRjYjBiZjBiY2EyNGFjNzlmMDhjYzhlOTdjYjk1MzA5ZmViMDJiOTBjMThiYmU4ZmEyMmI1ZWMzMGI0ZjM4MmI2MDJhNDc1MTQ3ODkwMDAyIiwiaXYiOiJiYTBlODg5ZDQ5MmZlZTFmNTFkMzJhYjg2NzJjMWMxY2QwODIxOTc3YTlmNGJkMWEifQ=="
+        },
+        "id": "gTY4ZnI-x"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [
+        {
+            "name": "7-Select Water 20oz",
+            "color": "#5db300"
+        },
+        {
+            "name": "Pureleaf Sweet Tea",
+            "color": "#e81123"
+        },
+        {
+            "name": "Diet Coke 20oz",
+            "color": "#6917aa"
+        },
+        {
+            "name": "Mountain Dew 20oz",
+            "color": "#015cda"
+        }
+    ],
+    "id": "fSpdpzAn9",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "azureCustomVision",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNDUzOWFjOGViNGM0ZGMzNDljOWI3MTc0ZWMxYWQ2NzYxZTllYTY1Y2QxNTJmOTBhODI4NDFjNjkzZTBjMWUxZWEzNDk2MGFhZTE5ZDYzOTZiMDI3MTZlY2I3YmIxYTI5YzhjNWJjYWJiYjI5YmRiNGQ0MjAxZGQ4NmJjNDg3NzNkZDU3MGQ2Y2EyMDE5ZjNjN2IyOGExNzE3NDI3MmZlNGQwZWUzNjY3YmMzNDE1OWVmNDJjNjg1OTg2MTE3NTVjYjUxNmQxYTcyZDM5ODcyZDFjZWQ3ZWZkNDBkZDZkMmUzODJmYWNkMDNhODRmODNiN2Y3ODJmZWNjNGQ2MDM5NGYwODVhNmIwN2MyYzAyYzhlMTUxMTY2OWM3NmI3MzIyNGFlOTI2ODBmNDJlMzVjMGNkZTVhZGNmNGExYmRlN2IyN2ZhOTA3NjhjOTBiNGJmNjIyMThkNjE0NzkyYWE3MyIsIml2IjoiNjk5MjMxZGFjZjVlZmUyZWNmOThkNDc0YzM1OWEyNjk0YzdhZWY4MmM5N2E1ZTRiIn0="
+        }
+    },
+    "version": "2.1.0",
+    "lastVisitedAssetId": "792efaad19d170ffaadc5417f6757b9d",
+    "assets": {
+        "75d8d9f5576d2f4bc92c3278f88e6ea6": {
+            "format": "jpg",
+            "id": "75d8d9f5576d2f4bc92c3278f88e6ea6",
+            "name": "i-0439fcb10ffd40468b924a57cb031635.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-0439fcb10ffd40468b924a57cb031635.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2e562d7c9535d00d30b05167031ed41d": {
+            "format": "jpg",
+            "id": "2e562d7c9535d00d30b05167031ed41d",
+            "name": "i-1e36ae8d3dc641308028f2eaff83c692.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-1e36ae8d3dc641308028f2eaff83c692.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5d561eea8073b1daf99ae58aca8ffa7a": {
+            "format": "jpg",
+            "id": "5d561eea8073b1daf99ae58aca8ffa7a",
+            "name": "i-1fbcb4c3bb0a444bbf5fd8a4ee7abda3.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-1fbcb4c3bb0a444bbf5fd8a4ee7abda3.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "65ffb73d53391cde640d0546655bedb2": {
+            "format": "jpg",
+            "id": "65ffb73d53391cde640d0546655bedb2",
+            "name": "i-698db67a6f5d4700a6003a236e98a900.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-698db67a6f5d4700a6003a236e98a900.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6cba08d18dfa0498099322be9fb979c7": {
+            "format": "jpg",
+            "id": "6cba08d18dfa0498099322be9fb979c7",
+            "name": "i-7acbc58c5ea14340bcf23c412a843fff.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-7acbc58c5ea14340bcf23c412a843fff.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "cd35b5f6e94d6f1beee48ab9cd5e0a56": {
+            "format": "jpg",
+            "id": "cd35b5f6e94d6f1beee48ab9cd5e0a56",
+            "name": "i-80020e86fa3b49d1b9b2aa9d018788b8.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-80020e86fa3b49d1b9b2aa9d018788b8.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "229d513da7cd7331041748fc26f46252": {
+            "format": "jpg",
+            "id": "229d513da7cd7331041748fc26f46252",
+            "name": "i-854037f759434ed8a4e442b483387a69.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-854037f759434ed8a4e442b483387a69.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "468bd2fa7ad762f832408995e62b2585": {
+            "format": "jpg",
+            "id": "468bd2fa7ad762f832408995e62b2585",
+            "name": "i-a13c23ac086445bdac1d5c3c320b2d2b.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-a13c23ac086445bdac1d5c3c320b2d2b.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1019968d713bc589ed018f0fc9b3990c": {
+            "format": "jpg",
+            "id": "1019968d713bc589ed018f0fc9b3990c",
+            "name": "shelf2.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/shelf2.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 1,
+            "type": 1
+        },
+        "174fe6cf769766987dc83f9f2957c866": {
+            "format": "jpg",
+            "id": "174fe6cf769766987dc83f9f2957c866",
+            "name": "shelf1.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/shelf1.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 1,
+            "type": 1
+        },
+        "f2ef6dd90997fdfcd089f20b32be1575": {
+            "format": "jpg",
+            "id": "f2ef6dd90997fdfcd089f20b32be1575",
+            "name": "i-fee5e5f755194a04acf79b7962d63032.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-fee5e5f755194a04acf79b7962d63032.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5f1fe5725f9ce4db7819a6f53f58dee8": {
+            "format": "jpg",
+            "id": "5f1fe5725f9ce4db7819a6f53f58dee8",
+            "name": "i-b17277927b694bc7a9edb885488a0d39.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-b17277927b694bc7a9edb885488a0d39.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "40a32e1e37ca2f06ce2adad61f6c86d6": {
+            "format": "jpg",
+            "id": "40a32e1e37ca2f06ce2adad61f6c86d6",
+            "name": "i-b08e3daa8c474319900a57077340c94b.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-b08e3daa8c474319900a57077340c94b.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "96f21d33a8dd52955903097e1991ab59": {
+            "format": "jpg",
+            "id": "96f21d33a8dd52955903097e1991ab59",
+            "name": "i-a5cb93a69f5749699da28dc53d9d7fce.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/i-a5cb93a69f5749699da28dc53d9d7fce.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d31ff274f8e6bf0346388168747881d6": {
+            "format": "jpg",
+            "id": "d31ff274f8e6bf0346388168747881d6",
+            "name": "7water1.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water1.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "db290d0e0227b5f7ea1d1c4e5a62be57": {
+            "format": "jpg",
+            "id": "db290d0e0227b5f7ea1d1c4e5a62be57",
+            "name": "7water2.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water2.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7a0686ded70e9b802a2dbb242e5911e5": {
+            "format": "jpg",
+            "id": "7a0686ded70e9b802a2dbb242e5911e5",
+            "name": "7water3.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water3.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5d8ad118d3d063cdcf1c4d70f989814b": {
+            "format": "jpg",
+            "id": "5d8ad118d3d063cdcf1c4d70f989814b",
+            "name": "7water4.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water4.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4d18e11d44758ec09d355e2fb21295e3": {
+            "format": "jpg",
+            "id": "4d18e11d44758ec09d355e2fb21295e3",
+            "name": "7water5.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water5.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c0bcee5edb9a90092b01acb0ead8b60b": {
+            "format": "jpg",
+            "id": "c0bcee5edb9a90092b01acb0ead8b60b",
+            "name": "7water6.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water6.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ec921768a3a6e2ace5e0384531ab88bb": {
+            "format": "jpg",
+            "id": "ec921768a3a6e2ace5e0384531ab88bb",
+            "name": "md1.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md1.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "cc5d8c2013789f97c946a856e9e0f868": {
+            "format": "jpg",
+            "id": "cc5d8c2013789f97c946a856e9e0f868",
+            "name": "md10.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md10.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "aa9b16c844b6e962c2352e62858b61e5": {
+            "format": "jpg",
+            "id": "aa9b16c844b6e962c2352e62858b61e5",
+            "name": "md11.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md11.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "34171b4a6e5043b03c4cee594afc0bce": {
+            "format": "jpg",
+            "id": "34171b4a6e5043b03c4cee594afc0bce",
+            "name": "md12.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md12.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "04c58f5a50b7590476c18a098efbea30": {
+            "format": "jpg",
+            "id": "04c58f5a50b7590476c18a098efbea30",
+            "name": "md2.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md2.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "204276b842b2ae62194321ab6d3daeab": {
+            "format": "jpg",
+            "id": "204276b842b2ae62194321ab6d3daeab",
+            "name": "md3.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md3.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0788e7853f1419a9130ec895a50cdc9f": {
+            "format": "jpg",
+            "id": "0788e7853f1419a9130ec895a50cdc9f",
+            "name": "md4.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md4.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "cc3ed8936c5a82ad318bc132c23043b6": {
+            "format": "jpg",
+            "id": "cc3ed8936c5a82ad318bc132c23043b6",
+            "name": "md5.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md5.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "570e8d76b20968e66aa7e6fa0ab2911b": {
+            "format": "jpg",
+            "id": "570e8d76b20968e66aa7e6fa0ab2911b",
+            "name": "md6.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md6.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b1bce512ae0ecc4b0baa8db8fe933ac7": {
+            "format": "jpg",
+            "id": "b1bce512ae0ecc4b0baa8db8fe933ac7",
+            "name": "md7.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md7.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3022a0513c02cc650062258aa0e89071": {
+            "format": "jpg",
+            "id": "3022a0513c02cc650062258aa0e89071",
+            "name": "md8.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md8.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "fd426d9e195f15629e8165a4e48eefcb": {
+            "format": "jpg",
+            "id": "fd426d9e195f15629e8165a4e48eefcb",
+            "name": "md9.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md9.jpg",
+            "size": {
+                "width": 900,
+                "height": 1200
+            },
+            "state": 2,
+            "type": 1
+        },
+        "df5b319ac607c4a02509e329240ef243": {
+            "format": "jpg",
+            "id": "df5b319ac607c4a02509e329240ef243",
+            "name": "tea1.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea1.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "179ea84f0d9404ad5a32aad7877a3eb8": {
+            "format": "jpg",
+            "id": "179ea84f0d9404ad5a32aad7877a3eb8",
+            "name": "tea2.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea2.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "33122b46a72cd8fa7999e248c9c74a1f": {
+            "format": "jpg",
+            "id": "33122b46a72cd8fa7999e248c9c74a1f",
+            "name": "tea3.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea3.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8fb2727a60e6663dcbec12f86bade843": {
+            "format": "jpg",
+            "id": "8fb2727a60e6663dcbec12f86bade843",
+            "name": "tea4.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea4.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "2cda2caabe4c8822e86e00f954320307": {
+            "format": "jpg",
+            "id": "2cda2caabe4c8822e86e00f954320307",
+            "name": "tea5.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea5.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "792efaad19d170ffaadc5417f6757b9d": {
+            "format": "jpg",
+            "id": "792efaad19d170ffaadc5417f6757b9d",
+            "name": "tea6.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea6.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7fb6551d827c8241f465bfac73a45c8f": {
+            "format": "jpg",
+            "id": "7fb6551d827c8241f465bfac73a45c8f",
+            "name": "tea7.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea7.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "11548bb1f956526860c33662017b6548": {
+            "format": "jpg",
+            "id": "11548bb1f956526860c33662017b6548",
+            "name": "tea8.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/tea8.jpg",
+            "size": {
+                "width": 1280,
+                "height": 720
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c236f22029c482ed5a609461e3fbc5e7": {
+            "format": "jpg",
+            "id": "c236f22029c482ed5a609461e3fbc5e7",
+            "name": "7water7.jpg",
+            "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/7water7.jpg",
+            "size": {
+                "width": 1200,
+                "height": 900
+            },
+            "state": 1,
+            "type": 1
+        }
+    }
+}

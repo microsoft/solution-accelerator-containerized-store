@@ -1,0 +1,47 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Microsoft.Xaml.Interactivity" xmlns:Custom1="using:Microsoft.Xaml.Interactions.Core" xmlns:Custom2="using:Microsoft.Xaml.Interactions.Media"
+    x:Class="StoreInABox.TouchscreenApp.AuthorizingPage"
+    mc:Ignorable="d"
+    Width="1080" Height="1920">
+    <Page.Resources>
+        <Storyboard x:Name="Spinner" RepeatBehavior="Forever">
+            <DoubleAnimation Duration="00:00:01" Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" To="353.059"/>
+        </Storyboard>
+    </Page.Resources>
+
+    <Page.Background>
+        <ThemeResource ResourceKey="ApplicationPageBackgroundThemeBrush"/>
+    </Page.Background>
+    <Custom:Interaction.Behaviors>
+        <Custom1:EventTriggerBehavior EventName="Loaded">
+            <Custom2:ControlStoryboardAction ControlStoryboardOption="Play" Storyboard="{StaticResource Spinner}"/>
+        </Custom1:EventTriggerBehavior>
+    </Custom:Interaction.Behaviors>
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="1920" Margin="0,0,0,0" VerticalAlignment="Top" Width="1080" Source="Assets/SwipeCard_2.png"/>
+
+        <!-- TODO: Add a click event that cancels the authorization and sends it back to home page. -->
+        <Button Style="{StaticResource ImageButton}" Width="575" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,70" Background="{x:Null}" Height="200">
+            <Image Source="Assets/btn_cancel_Up.png"/>
+        </Button>
+        <Ellipse x:Name="ellipse" Height="374" Margin="354,1185,353,361" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform/>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3DB9B" Offset="0"/>
+                    <GradientStop Color="#FF6AB460" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Margin="369,1200,367,375" Fill="#FF6AB460" d:LayoutOverrides="TopPosition, BottomPosition" HorizontalAlignment="Stretch"/>
+
+    </Grid>
+</Page>

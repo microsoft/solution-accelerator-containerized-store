@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="StoreInABox.TouchscreenApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer>
+        <Grid BorderThickness="1" BorderBrush="Black">
+            <Image HorizontalAlignment="center" Margin="0,0,0,0" VerticalAlignment="Top" Width="1080" Height="1920" Source="Assets/Home.png"/>
+            <Button Style="{StaticResource ImageButton}" Click="Page_Clicked" Width="260" HorizontalAlignment="center" VerticalAlignment="Bottom" Background="{x:Null}" d:IsHidden="True" Height="142" Margin="0,0,0,90">
+                <Image Source="Assets/btn_continueArrow_Up.png"/>
+            </Button>
+            <Button Opacity="0" Click="Admin_Clicked" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="20" Height="20"/>
+        </Grid>
+    </ScrollViewer>
+</Page>

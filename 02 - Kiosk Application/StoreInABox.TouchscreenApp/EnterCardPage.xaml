@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="StoreInABox.TouchscreenApp.EnterCardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="ECPage"
+    mc:Ignorable="d">
+    <ScrollViewer Height="{Binding ElementName=ECPage, Path=Height}">
+        <Grid x:Name="pgGrid">
+            <Image HorizontalAlignment="Center" Height="1920" Width="1080" Margin="0,0,0,0" VerticalAlignment="Top" Source="Assets/SwipeCard_1.png"/>
+            <Button Style="{StaticResource ImageButton}" Click="Back_Clicked" Height="155" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,885,1713" Background="{x:Null}">
+                <Image Source="Assets/btn_back_Pressed.png"/>
+            </Button>
+        </Grid>
+    </ScrollViewer>
+</Page>

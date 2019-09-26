@@ -1,0 +1,108 @@
+﻿<Page
+    x:Class="StoreInABox.TouchscreenApp.AdminPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:StoreInABox.TouchscreenApp.ViewModels"
+    x:Name="RootPage"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:AdminViewModel x:Name="viewModelInDataContext"/>
+    </Page.DataContext>
+    <Grid Margin="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="473*"/>
+            </Grid.RowDefinitions>
+            <Grid HorizontalAlignment="Stretch" d:LayoutOverrides="Height">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Click="Back_Clicked" HorizontalAlignment="Center" Background="{x:Null}" Margin="0,0,0,0" BorderBrush="White" BorderThickness="0">
+                        <Image Source="Assets/btn_back_Up.png" Stretch="UniformToFill" />
+                    </Button>
+                </StackPanel>
+                <TextBlock VerticalAlignment="Center" FontSize="30" HorizontalAlignment="Center" Margin="5"><Run Text="Kiosk Setup"/></TextBlock>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                    <Button ToolTipService.ToolTip="Add Shelf" Margin="5" Command="{Binding AddShelfCommand}" Content="+ Shelf"/>
+                    <Button ToolTipService.ToolTip="Capture Images" Margin="5" Command="{Binding CaptureImagesCommand}" FontFamily="Segoe UI Symbol" Content=""/>
+                </StackPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <ComboBox x:Name="cmbCardReaders" 
+                      ItemsSource="{Binding DataContext.ComboAllCardReaders, ElementName=RootPage}"
+                      SelectedValue="{Binding DataContext.SelectedCmbCardReader, Mode=TwoWay, ElementName=RootPage}" 
+                      DisplayMemberPath="Item1" 
+                      SelectedValuePath="Item2" 
+                      Width="300" 
+                      Margin="10,0,0,0"                          
+                      Header="Choose Card Reader"/>
+                <TextBox x:Name="txtPredictionKey" 
+                    Header="Prediction Key:" 
+                    Width="300" 
+                    Margin="10,0,0,15"
+                    Text="{Binding DataContext.PredictionKey, Mode=TwoWay, ElementName=RootPage}"/>
+                <TextBox x:Name="txtPredictionUri" 
+                    Header="Prediction Endpoint:" 
+                    Width="300" 
+                    Margin="10,0,0,15"
+                    Text="{Binding DataContext.PredictionUri, Mode=TwoWay, ElementName=RootPage}"/>
+            </StackPanel>
+            <ListBox x:Name="ShelvesListView" 
+                 ItemsSource="{Binding Store.Content}" 
+                 SelectedItem="{Binding SelectedShelf, Mode=TwoWay}" 
+                 Margin="0" 
+                 Grid.Row="2" >
+            <ListBox.ItemTemplate>
+                    <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="{Binding Name}" />
+                                <ItemsControl ItemsSource="{Binding CameraContainer.Cameras}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="5">
+                                                <Image  Width="300" Source="{Binding LastImageSource}" />
+                                                <Button Command="{Binding DataContext.RemoveCameraCommand, ElementName=RootPage}" CommandParameter="{Binding}" Content="-" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Column="1" >
+            <StackPanel Orientation="Vertical">
+                <TextBlock VerticalAlignment="Top" Text="Cameras" FontSize="30" HorizontalAlignment="Center" Margin="5"/>
+            <ItemsControl ItemsSource="{Binding CameraManager.AllCameras}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,0,0,15"  Visibility="{Binding IsAvailable, Converter={StaticResource BoolToVisibilityConverter}}">
+                            <Image  Width="300" Source="{Binding LastImageSource}" />
+                            <Button Command="{Binding DataContext.AddCameraCommand, ElementName=RootPage}" CommandParameter="{Binding }" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="+" />
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

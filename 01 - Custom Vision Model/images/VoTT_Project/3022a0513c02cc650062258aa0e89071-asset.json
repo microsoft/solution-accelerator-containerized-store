@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "3022a0513c02cc650062258aa0e89071",
+        "name": "md8.jpg",
+        "path": "file:C:/Users/marktayl/Documents/Projects/StoreInABox/store-in-a-box/01%20-%20Custom%20Vision%20Model/images/md8.jpg",
+        "size": {
+            "width": 900,
+            "height": 1200
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "sctjCbzxV",
+            "type": "RECTANGLE",
+            "tags": [
+                "Mountain Dew 20oz"
+            ],
+            "boundingBox": {
+                "height": 605.7471264367816,
+                "width": 296.551724137931,
+                "left": 356.32183908045977,
+                "top": 290.8045977011494
+            },
+            "points": [
+                {
+                    "x": 356.32183908045977,
+                    "y": 290.8045977011494
+                },
+                {
+                    "x": 652.8735632183908,
+                    "y": 290.8045977011494
+                },
+                {
+                    "x": 652.8735632183908,
+                    "y": 896.5517241379309
+                },
+                {
+                    "x": 356.32183908045977,
+                    "y": 896.5517241379309
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}

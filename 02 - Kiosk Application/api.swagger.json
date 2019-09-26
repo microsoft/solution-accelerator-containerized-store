@@ -1,0 +1,384 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Custom_Vision_Prediction_2.0",
+    "version": "1.0"
+  },
+  "host": "southcentralus.api.cognitive.microsoft.com",
+  "basePath": "/customvision/v2.0/Prediction",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Prediction-key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "Prediction-key",
+      "in": "query"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ],
+  "paths": {
+    "/{projectId}/image": {
+      "post": {
+        "description": "Predict an image and saves the result",
+        "operationId": "PredictImage",
+        "summary": "PredictImage",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Format - uuid. The project id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "iterationId",
+            "in": "query",
+            "description": "Format - uuid. Optional. Specifies the id of a particular iteration to evaluate against.\r\n            The default iteration for the project will be used when not specified",
+            "type": "string"
+          },
+          {
+            "name": "application",
+            "in": "query",
+            "description": "Optional. Specifies the name of application using the endpoint",
+            "type": "string"
+          },
+          {
+            "name": "Prediction-Key",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "imageData",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImagePrediction"
+            }
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ]
+      }
+    },
+    "/{projectId}/url": {
+      "post": {
+        "description": "Predict an image url and saves the result",
+        "operationId": "PredictImageUrl",
+        "summary": "PredictImageUrl",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Format - uuid. The project id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "iterationId",
+            "in": "query",
+            "description": "Format - uuid. Optional. Specifies the id of a particular iteration to evaluate against.\r\n            The default iteration for the project will be used when not specified",
+            "type": "string"
+          },
+          {
+            "name": "application",
+            "in": "query",
+            "description": "Optional. Specifies the name of application using the endpoint",
+            "type": "string"
+          },
+          {
+            "name": "Prediction-Key",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "imageUrl",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ImageUrl"
+            },
+            "description": "An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated"
+          }
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImagePrediction"
+            }
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ]
+      }
+    },
+    "/{projectId}/url/nostore": {
+      "post": {
+        "description": "Predict an image url without saving the result",
+        "operationId": "PredictImageUrlWithNoStore",
+        "summary": "PredictImageUrlWithNoStore",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Format - uuid. The project id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "iterationId",
+            "in": "query",
+            "description": "Format - uuid. Optional. Specifies the id of a particular iteration to evaluate against.\r\n            The default iteration for the project will be used when not specified",
+            "type": "string"
+          },
+          {
+            "name": "application",
+            "in": "query",
+            "description": "Optional. Specifies the name of application using the endpoint",
+            "type": "string"
+          },
+          {
+            "name": "Prediction-Key",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "imageUrl",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/ImageUrl"
+            },
+            "description": "An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated"
+          }
+        ],
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImagePrediction"
+            }
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ]
+      }
+    },
+    "/{projectId}/image/nostore": {
+      "post": {
+        "description": "Predict an image without saving the result",
+        "operationId": "PredictImageWithNoStore",
+        "summary": "PredictImageWithNoStore",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Format - uuid. The project id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "iterationId",
+            "in": "query",
+            "description": "Format - uuid. Optional. Specifies the id of a particular iteration to evaluate against.\r\n            The default iteration for the project will be used when not specified",
+            "type": "string"
+          },
+          {
+            "name": "application",
+            "in": "query",
+            "description": "Optional. Specifies the name of application using the endpoint",
+            "type": "string"
+          },
+          {
+            "name": "Prediction-Key",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "imageData",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ImagePrediction"
+            }
+          }
+        },
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ImageUrl": {
+      "type": "object",
+      "properties": {
+        "Url": {
+          "type": "string",
+          "x-nullable": true
+        }
+      },
+      "x-nullable": true
+    },
+    "ImagePrediction": {
+      "description": "result of an image prediction request",
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "Project": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "Iteration": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "Created": {
+          "format": "date-time",
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "Predictions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Prediction"
+          },
+          "readOnly": true,
+          "x-nullable": true
+        }
+      },
+      "x-nullable": true
+    },
+    "Prediction": {
+      "type": "object",
+      "properties": {
+        "Probability": {
+          "format": "float",
+          "type": "number",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "TagId": {
+          "format": "uuid",
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": false
+        },
+        "TagName": {
+          "type": "string",
+          "readOnly": true,
+          "x-nullable": true
+        },
+        "Region": {
+          "$ref": "#/definitions/BoundingBox",
+          "readOnly": true
+        }
+      },
+      "x-nullable": true
+    },
+    "BoundingBox": {
+      "description": "Bounding box that defines a region of an image",
+      "type": "object",
+      "properties": {
+        "Left": {
+          "format": "float",
+          "description": "Coordinate of the Left boundary",
+          "type": "number",
+          "x-nullable": false
+        },
+        "Top": {
+          "format": "float",
+          "description": "Coordinate of the top boundary",
+          "type": "number",
+          "x-nullable": false
+        },
+        "Width": {
+          "format": "float",
+          "description": "Width",
+          "type": "number",
+          "x-nullable": false
+        },
+        "Height": {
+          "format": "float",
+          "description": "Height",
+          "type": "number",
+          "x-nullable": false
+        }
+      },
+      "x-nullable": true
+    }
+  },
+  "tags": []
+}

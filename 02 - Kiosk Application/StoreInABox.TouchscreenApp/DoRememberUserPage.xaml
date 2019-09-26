@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="StoreInABox.TouchscreenApp.DoRememberUserPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="DRPage">
+    <ScrollViewer Height="{Binding ElementName=DRPage, Path=Height}">
+        <Grid>
+            <Image HorizontalAlignment="Center" Height="1920" Margin="0,0,0,0" VerticalAlignment="Top" Width="1080" Source="Assets/SwipeCard_3.png"/>
+            <Image HorizontalAlignment="Center" Height="1354" VerticalAlignment="Top" Width="1080" Source="Assets/PurchaseConfirmation.png" Stretch="None"/>
+            <Button Style="{StaticResource ImageButton}" Click="Back_Clicked" Height="155" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,885,1713" Background="{x:Null}">
+                <Image Source="Assets/btn_back_Pressed.png"/>
+            </Button>
+            <Button Style="{StaticResource ImageButton}" Click="OnNo_Clicked" Width="575" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,70" Background="{x:Null}" Height="200">
+                <Image Source="Assets/btn_no_Up.png"/>
+            </Button>
+            <Button Style="{StaticResource ImageButton}" Click="OnYes_Clicked" Width="575" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,235" Background="{x:Null}" Height="200">
+                <Image Source="Assets/btn_yes_Up.png"/>
+            </Button>
+        </Grid>
+    </ScrollViewer>
+</Page>

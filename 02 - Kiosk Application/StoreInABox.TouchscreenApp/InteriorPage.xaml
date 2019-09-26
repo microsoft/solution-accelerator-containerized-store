@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="StoreInABox.TouchscreenApp.InteriorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoreInABox.TouchscreenApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:StoreInABox.TouchscreenApp.ViewModels"
+    x:Name="RootPage"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <vm:InteriorViewModel x:Name="viewModelInDataContext"/>
+    </Page.DataContext>
+    <Grid HorizontalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Button Click="DoorClosed_Clicked" Command="{Binding DataContext.ReconcileCommand, ElementName=RootPage}" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Close Door" Margin="25,25,0,0" BorderThickness="1"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid HorizontalAlignment="Stretch" d:LayoutOverrides="Height">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                </StackPanel>
+                <TextBlock VerticalAlignment="Center" FontSize="30" HorizontalAlignment="Center" Margin="5"><Run Text="Kiosk Interior"/></TextBlock>
+            </Grid>
+            <ListBox x:Name="ShelvesListView" 
+                 ItemsSource="{Binding Store.Content}" 
+                 SelectedItem="{Binding SelectedShelf, Mode=TwoWay}" 
+                 Margin="0" 
+                 Grid.Row="2" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}" />
+                                <ItemsControl ItemsSource="{Binding CameraContainer.Cameras}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5" >
+                                                <Image  Width="500" Source="{Binding LastImageSource}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <Grid Grid.Column="2" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Currently In Stock:" 
+                       Grid.Column="1" Grid.Row="1" 
+                       HorizontalAlignment="Center"
+                       FontSize="20"/>
+            <ListBox x:Name="ShelvesItemView" 
+                 ItemsSource="{Binding Store.Content}" 
+                 SelectedItem="{Binding SelectedShelf, Mode=TwoWay}" 
+                 Margin="0" 
+                 Grid.Column="1"
+                 Grid.Row="2" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel >
+                                <ItemsControl ItemsSource="{Binding Stock}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5" >
+                                                <TextBlock Text="{Binding Name}" />
+                                                <TextBlock Text="{Binding Cost}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock x:Name="txtBasketHeader"
+                       Text="Shopping Basket:" 
+                       Grid.Column="1" Grid.Row="3" 
+                       HorizontalAlignment="Center"
+                       FontSize="20"
+                       Visibility="Collapsed"/>
+            <ListBox x:Name="ShelvesBasketView" 
+                 ItemsSource="{Binding Store.Content}" 
+                 SelectedItem="{Binding SelectedShelf, Mode=TwoWay}" 
+                 Margin="0" 
+                 Grid.Column="1"
+                 Grid.Row="4" 
+                 Visibility="Collapsed">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel >
+                                <ItemsControl ItemsSource="{Binding Basket}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="5" >
+                                                <TextBlock Text="{Binding Name}" />
+                                                <TextBlock Text="{Binding Cost}" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Page>

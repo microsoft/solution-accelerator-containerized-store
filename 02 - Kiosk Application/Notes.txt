@@ -1,0 +1,5 @@
+OSS projects used in this prototype:
+
+Fody https://github.com/Fody/Fody - MIT License
+Fody/PropertyChanged https://github.com/Fody/PropertyChanged - MIT License
+Newtonsoft.json https://www.newtonsoft.com/json - MIT License
