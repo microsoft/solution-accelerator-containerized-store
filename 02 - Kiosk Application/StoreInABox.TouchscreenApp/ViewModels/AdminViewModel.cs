@@ -9,6 +9,7 @@ using StoreInABox.Container_Unv;
 using Windows.UI.Xaml.Controls;
 using Windows.Storage;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media;
 
 namespace StoreInABox.TouchscreenApp.ViewModels
 {
@@ -99,6 +100,7 @@ namespace StoreInABox.TouchscreenApp.ViewModels
 
         public CameraManager CameraManager { get { return ((App)Application.Current).CameraManager; } }
         public ICommand AddShelfCommand { get; set; }
+        public ICommand RemoveShelfCommand { get; set; }
         public ICommand AddCameraCommand { get; set; }
         public ICommand RemoveCameraCommand { get; set; }
         public ICommand CaptureImagesCommand { get; set; }
@@ -115,6 +117,7 @@ namespace StoreInABox.TouchscreenApp.ViewModels
             UiAllCameras = CameraManager.AllCamerasMeta;
 
             this.AddShelfCommand = new DelegateCommand(this.AddShelf);
+            this.RemoveShelfCommand = new DelegateCommand(this.RemoveShelf);
             this.AddCameraCommand = new DelegateCommand(this.AddCamera);
             this.RemoveCameraCommand = new DelegateCommand(this.RemoveCamera);
             this.CaptureImagesCommand = new DelegateCommand(this.CaptureImages);
@@ -137,6 +140,19 @@ namespace StoreInABox.TouchscreenApp.ViewModels
                 PredictionKey = this.PredictionKey,
                 PredictionUri = this.PredictionUri });
 
+            this.SaveStore();
+        }
+
+        public void RemoveShelf(object param)
+        {
+            var thisShelf = param as Shelf;
+
+                foreach (var cam in thisShelf.CameraContainer.Cameras)
+                {
+                    cam.IsAvailable = true;
+                }
+
+            Store.Content.Remove(thisShelf);
             this.SaveStore();
         }
 
@@ -167,7 +183,9 @@ namespace StoreInABox.TouchscreenApp.ViewModels
 
         public void RemoveCamera(object param)
         {
-            Camera cam = param as Camera;
+            var thisContentPresenter = GetNthParent(6, param as DependencyObject);
+            this.SelectedShelf = ((thisContentPresenter as ContentPresenter).DataContext as Shelf);
+            Camera cam = (param as ContentPresenter).DataContext as Camera;
             if (this.SelectedShelf == null)
             {
                 DisplaySelectShelf();
@@ -199,5 +217,13 @@ namespace StoreInABox.TouchscreenApp.ViewModels
             await selectShelfDialog.ShowAsync();
         }
 
+        private DependencyObject GetNthParent(int n, DependencyObject dobj)
+        {
+            for (int x=0; x < n; x++)
+            {
+                dobj = VisualTreeHelper.GetParent(dobj);
+            }
+            return dobj;
+        }
     }
 }

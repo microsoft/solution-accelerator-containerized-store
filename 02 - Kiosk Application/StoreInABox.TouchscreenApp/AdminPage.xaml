@@ -7,37 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:StoreInABox.TouchscreenApp.ViewModels"
     x:Name="RootPage"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Loaded="RootPage_Loaded">
     <Page.DataContext>
         <vm:AdminViewModel x:Name="viewModelInDataContext"/>
     </Page.DataContext>
-    <Grid Margin="25">
+    <Grid >
+        <Button Style="{StaticResource ImageButton}" Click="Back_Clicked" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Background="Transparent" TabIndex="9" BorderThickness="0" BorderBrush="Transparent">
+            <Image Source="Assets/btn_back_Up.png"/>
+        </Button>
+        <Grid Margin="25">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="75"/>
                 <RowDefinition Height="473*"/>
             </Grid.RowDefinitions>
             <Grid HorizontalAlignment="Stretch" d:LayoutOverrides="Height">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                    <Button Click="Back_Clicked" HorizontalAlignment="Center" Background="{x:Null}" Margin="0,0,0,0" BorderBrush="White" BorderThickness="0">
-                        <Image Source="Assets/btn_back_Up.png" Stretch="UniformToFill" />
-                    </Button>
-                </StackPanel>
                 <TextBlock VerticalAlignment="Center" FontSize="30" HorizontalAlignment="Center" Margin="5"><Run Text="Kiosk Setup"/></TextBlock>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <Button ToolTipService.ToolTip="Add Shelf" Margin="5" Command="{Binding AddShelfCommand}" Content="+ Shelf"/>
+                    <Button x:Name="btnAddShelf" ToolTipService.ToolTip="Add Shelf" Margin="5" Command="{Binding AddShelfCommand}" Content="+ Shelf"/>
                     <Button ToolTipService.ToolTip="Capture Images" Margin="5" Command="{Binding CaptureImagesCommand}" FontFamily="Segoe UI Symbol" Content=""/>
                 </StackPanel>
             </Grid>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <ComboBox x:Name="cmbCardReaders" 
                       ItemsSource="{Binding DataContext.ComboAllCardReaders, ElementName=RootPage}"
-                      SelectedValue="{Binding DataContext.SelectedCmbCardReader, Mode=TwoWay, ElementName=RootPage}" 
+                      SelectedValue="{Binding DataContext.SelectedCmbCardReader, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ElementName=RootPage}"
                       DisplayMemberPath="Item1" 
                       SelectedValuePath="Item2" 
                       Width="300" 
@@ -78,12 +78,13 @@
                                     <DataTemplate>
                                         <StackPanel Margin="5">
                                                 <Image  Width="300" Source="{Binding LastImageSource}" />
-                                                <Button Command="{Binding DataContext.RemoveCameraCommand, ElementName=RootPage}" CommandParameter="{Binding}" Content="-" />
+                                                <Button HorizontalAlignment="Right" Command="{Binding DataContext.RemoveCameraCommand, ElementName=RootPage}" CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}" Content="-" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>
-                        </StackPanel>
+                            <Button Command="{Binding DataContext.RemoveShelfCommand, ElementName=RootPage}" HorizontalAlignment="Left" VerticalAlignment="Bottom" CommandParameter="{Binding}" Content="-" />
+                         </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -104,5 +105,6 @@
             </ItemsControl>
             </StackPanel>
         </Grid>
+    </Grid>
     </Grid>
 </Page>

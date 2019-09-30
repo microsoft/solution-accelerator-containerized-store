@@ -143,11 +143,13 @@ namespace StoreInABox.TouchscreenApp
             // json serializer does not preserve object references so have to refresh after load.
             foreach (var shelf in this.Store.Content)
             {
-                shelf.CameraContainer.UpdateCameras();
-                foreach (var cam in shelf.CameraContainer.Cameras)
-                {
-                    cam.IsAvailable = false;
-                }
+
+                    shelf.CameraContainer.UpdateCameras();
+                    foreach (var cam in shelf.CameraContainer.Cameras)
+                    {
+                        cam.IsAvailable = false;
+                    }
+
             }
         }
 

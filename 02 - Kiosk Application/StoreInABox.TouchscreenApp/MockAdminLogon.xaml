@@ -12,7 +12,6 @@
         <Button Style="{StaticResource ImageButton}" Click="Back_Clicked" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Background="{x:Null}">
             <Image Source="Assets/btn_back_Up.png"/>
         </Button>
-
         <StackPanel Orientation="Vertical" Width="300" HorizontalAlignment="Left" Margin="152,161,0,0">
             <TextBox x:Name="txtUserName" PlaceholderText="UserName"/>
             <PasswordBox x:Name="pwbPassword" PlaceholderText="Password"/>

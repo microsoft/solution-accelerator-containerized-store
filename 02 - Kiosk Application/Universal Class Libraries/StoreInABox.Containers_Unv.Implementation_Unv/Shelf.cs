@@ -18,7 +18,7 @@ namespace StoreInABox.Container_Unv
 
         public ObservableCollection<ProductItem> Basket { get; private set; } = new ObservableCollection<ProductItem>();
 
-        public CameraContainer CameraContainer { get; set; }   
+        public CameraContainer CameraContainer { get; set; } = new CameraContainer();
 
         public string Name { get; set; }
 
@@ -59,8 +59,6 @@ namespace StoreInABox.Container_Unv
                 this.NewStock.Clear();
             }
 
-            if (this.CameraContainer != null)
-            {
                 foreach (var camera in this?.CameraContainer?.Cameras)
                 {
                     // Check to make sure stream is not shutdown
@@ -101,7 +99,6 @@ namespace StoreInABox.Container_Unv
                         }
                     }
                 }
-            }
         }
     }
 }

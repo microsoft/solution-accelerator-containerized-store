@@ -31,17 +31,20 @@ namespace StoreInABox.TouchscreenApp
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
-            // Stop the camera manager so that all the resources and threads are cleaned up.
-            // Ideally we'd implement IDisposable on the CameraManager.
-            //(this.DataContext as AdminViewModel).Stop();
             (this.DataContext as AdminViewModel).SaveStore();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+
         }
 
+        private void RootPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Get rid of the initial border around the back button by changing control in focus
+            btnAddShelf.Focus(FocusState.Programmatic);
+        }
     }
     
 }
