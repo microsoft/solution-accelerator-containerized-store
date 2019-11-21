@@ -6,15 +6,15 @@ languages:
 - powershell
 products:
 - azure
-description: "Welcome to the Store-in-a-Box Solution Accelerator!"
-urlFragment: azure-customvision-store-in-a-Box
+description: "Welcome to the Containerized Store Solution Accelerator!"
+urlFragment: azure-customvision-containerized-store
 ---
 
 ![](./doc_images/siabheader.png)
 
-# Store-in-a-Box Solution Accelerator Guide
+# Containerized Store Solution Accelerator Guide
 ## About this repository
-Welcome to the Store-in-a-Box Solution Accelerator!  This accelerator was built to provide developers with all of the resources needed to quickly build a vending kiosk prototype with [Azure Custom Vision](https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/).  Use this accelerator to jump start your development efforts with your own data or as a learning tool to better understand how Custom Vision AI can be transformative for the retail industry.
+Welcome to the Containerized Store Solution Accelerator!  This accelerator was built to provide developers with all of the resources needed to quickly build a vending kiosk prototype with [Azure Custom Vision](https://azure.microsoft.com/en-us/services/cognitive-services/custom-vision-service/).  Use this accelerator to jump start your development efforts with your own data or as a learning tool to better understand how Custom Vision AI can be transformative for the retail industry.
 
 In this repository, we've provided you with all of the artifacts needed to quickly create a Custom Vision Solution including: templates for deploying the appropriate Azure resources, assets for creating your first Custom Vision project and training and testing your first model, and a retail kiosk application to demonstrate how your newly created AI model could be used as part of a retail solution. We've infused best practices throughout the documentation to help further guide you.
 
